@@ -22,13 +22,12 @@
         </ion-list>
       </ion-content>
     </ion-menu>
-
+    <ion-router-outlet id="main"></ion-router-outlet>
     <ion-card *ngFor="let carrito of carritos; let i=index">
       <ion-img [src]="carrito.imagen"></ion-img>
       <ion-card-header>
         <ion-card-title>Descripcion</ion-card-title>
       </ion-card-header>
-      <ion-router-outlet id="main"></ion-router-outlet>
       <ion-card-content>
         <p>Placa : {{carrito.placa}}</p>
         <p>Numero de pasajeros: {{carrito.numPasajeros}}</p>
