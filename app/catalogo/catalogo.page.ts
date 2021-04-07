@@ -84,5 +84,9 @@ export class CatalogoPage implements OnInit {
     this.router.navigate(['../consultar']);
   }
 
+  goToConsultarCliente(){
+    this.router.navigate(['../consultar-cliente']);
+  }
+
 
 }

@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'catalogo',
     loadChildren: () => import('./catalogo/catalogo.module').then( m => m.CatalogoPageModule)
   },
+  {
+    path: 'consultar-cliente',
+    loadChildren: () => import('./consultar-cliente/consultar-cliente.module').then( m => m.ConsultarClientePageModule)
+  },
 ];
 
 @NgModule({

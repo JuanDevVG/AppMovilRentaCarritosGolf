@@ -9,19 +9,12 @@
 
 <ion-content>
 
- <ion-item>
-    <ion-avatar class="icono-clientes">
-      <img src="../assets/img/clientes.png">
-    </ion-avatar>
-    <ion-label>ir a Clientes</ion-label>
-  </ion-item>
-  
   <form *ngFor="let renta of rentas">
     <h2 class="titulo-rentas">Rentas</h2>
     <h3 class="subtitulo-rentas">Informacion de Renta</h3>
     <ion-item lines="none">
       <ion-label position="floating">Placa</ion-label>
-      <ion-input type="text" value="{{renta.placa}}"></ion-input>
+      <ion-input type="text" value="" placeholder="Ingrese el numero de placa a cosultar"></ion-input>
     </ion-item>
     <ion-item lines="none">
       <ion-label position="floating">Numero de Licencia</ion-label>
@@ -33,7 +26,7 @@
     </ion-item>
     <ion-item lines="none">
       <ion-label position="floating">Hora de renta</ion-label>
-      <ion-input type="time" value="{{renta.horaRenta}}"></ion-input> 
+      <ion-input type="time" value="{{renta.horaRenta}}"></ion-input>
     </ion-item>
     <ion-item lines="none">
       <ion-label position="floating">Fecha de devolucion</ion-label>
@@ -60,9 +53,9 @@
       <ion-input type="text" value="{{renta.descripcionEstadoVehiculo}}"></ion-input>
     </ion-item>
 
-    <ion-button color="secondary" expand="block">Enviar</ion-button>
+    <ion-button color="secondary" expand="block">Consultar</ion-button>
 
   </form>
-  
+
 
 </ion-content>

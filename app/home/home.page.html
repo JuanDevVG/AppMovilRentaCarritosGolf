@@ -9,40 +9,40 @@
 <ion-toolbar>
   <ion-buttons slot="start">
     <ion-back-button></ion-back-button>
-    
+
   </ion-buttons>
-  
+
   <ion-toolbar color="tertiary" expand="block">
   <ion-title expand="floating" color="light"><h5>ROAD ON WHEELS</h5></ion-title>
   </ion-toolbar>
 </ion-toolbar>
 
 <ion-content [fullscreen]="true">
-  
+
   <ion-avatar id= myAvatar>
     <img src="https://i.postimg.cc/jDG9rhCK/usuario.png">
-  
+
   </ion-avatar>
   <ion-item>
     <ion-label position="stacked"><h1>Usuario</h1></ion-label>
     <ion-input></ion-input>
   </ion-item>
   <ion-item>
- 
+
     <ion-label position="floating">Numero user </ion-label>
     <ion-input type="text" [(ngModel)]="nombre"></ion-input>
-  
+
   </ion-item>
-  
-  <ion-button color="light" (click)="goToCatalogo()" expand="block">Ingresar</ion-button>
- 
+
+  <ion-button color="success" (click)="goToCatalogo()" expand="block">Ingresar</ion-button>
+
     <ion-text color="danger">
       <br>
     <h6>Recuerda introducir en el apartado de <br>"numero user" el numero asignado por la empresa</h6>
   </ion-text>
- 
 
-  
+
+
 </ion-content>
 
 
