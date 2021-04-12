@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/Router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-catalogo',
@@ -11,7 +12,7 @@ export class CatalogoPage implements OnInit {
   leerMas:boolean=false;
   carritos:Array<any>=[];
   carritoElegido: string="";
-  constructor(private router:Router) { }
+  constructor(private router:Router, public alerta: AlertController) { }
 
   ngOnInit() {
     this.mostrarCarritos();
@@ -88,5 +89,32 @@ export class CatalogoPage implements OnInit {
     this.router.navigate(['../consultar-cliente']);
   }
 
+  goToHome(){
+    this.router.navigate(['../home']);
+  }
 
+  async presentAlertConfirm() {
+    const alert = await this.alerta.create({
+      header: 'Cerrar sesion!',
+      message: 'Seguro que desea cerrar la sesion?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          cssClass: 'tertiary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        },
+        {
+          text: 'Ok',
+          cssClass: 'secondary',
+          handler: () => {
+            this.goToHome();
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
 }

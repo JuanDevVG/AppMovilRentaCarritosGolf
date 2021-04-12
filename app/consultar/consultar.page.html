@@ -37,20 +37,12 @@
       <ion-input type="time" value="{{renta.horaDevolucion}}"></ion-input>
     </ion-item>
     <ion-item lines="none">
-      <ion-label position="floating">Kilometraje</ion-label>
-      <ion-input type="number" value="{{renta.kilometraje}}"></ion-input>
-    </ion-item>
-    <ion-item>
-      <label>Estado de vehiculo</label><br>
-    <select class="my-select">
-      <option>Bueno</option>
-      <option>Regular</option>
-      <option>Malo</option>
-    </select>
+      <ion-label position="floating">KilometrajeInicial</ion-label>
+      <ion-input type="number" value="{{renta.kilometrajeInicial}}"></ion-input>
     </ion-item>
     <ion-item lines="none">
-      <ion-label position="floating">Descripcion de estado de vehiculo</ion-label>
-      <ion-input type="text" value="{{renta.descripcionEstadoVehiculo}}"></ion-input>
+      <ion-label position="floating">KilometrajeFinal</ion-label>
+      <ion-input type="number" value="{{renta.kilometrajeFinal}}"></ion-input>
     </ion-item>
 
     <ion-button color="secondary" expand="block">Consultar</ion-button>

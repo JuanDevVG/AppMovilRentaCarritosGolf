@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './consultar.page.html',
   styleUrls: ['./consultar.page.scss'],
 })
-export class ConsultarPage implements OnInit { 
+export class ConsultarPage implements OnInit {
 
   constructor() { }
 
@@ -20,9 +20,8 @@ export class ConsultarPage implements OnInit {
       horaRenta: "5:00",
       fechaDevolucion: "15/10/2020",
       horaDevolucion: "5:00",
-      kilometraje: "20",
-      estadoVehiculo: "Bueno",
-      descripcionEstadoVehiculo: "Sin mantenimiento"
+      kilometrajeInicial: "20",
+      kilometrajeFinal: "50"
     },
   ]
 }
